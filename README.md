@@ -19,3 +19,12 @@ Both ROMs contain executable code, but the SOUND ROM contains the sound presets.
 For all I can tell, `0xFD80~0xFFFF` on the ROM is useless, because it maps to the
 on-chip RAM and hardware registers of the processor. I expected all zeroes or all
 ones, but there is indeed data there. Not sure what for.
+
+### Waveforms / PCM Samples
+
+VOICE0 and VOICE1 (IC8 and IC9) are on a separate bus, connected only to the GEW-5 ICs.
+
+| Name       | Memory Range      | File           |
+|------------|-------------------|----------------|
+| VOICE0     | 0x000000~0x020000 | voice0.rom     |
+| VOICE1     | 0x020000~0x040000 | voice1.rom     |
